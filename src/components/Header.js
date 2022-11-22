@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar, NavbarBrand, Button } from "reactstrap";
+import { Navbar, Button } from "reactstrap";
 
 function Header(props) {
 	return (

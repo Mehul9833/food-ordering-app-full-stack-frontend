@@ -20,7 +20,7 @@ const FoodItems = (props) => {
 			});
 			setFoodItem(getFoodItem[0]);
 		}
-	}, [props.foodData]);
+	}, [props.foodData, foodName.id, props.setCartData]);
 
 	function handleAddItem(item) {
 		handleAddToCart(item);

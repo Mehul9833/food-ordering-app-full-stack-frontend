@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CardBody, Card, Button } from "reactstrap";
-import { getFood, handleRemoveFromCart } from "../../utils/handleApi";
+import { handleRemoveFromCart } from "../../utils/handleApi";
 
 const Cart = (props) => {
 	const [cart, setCart] = useState([]);
@@ -12,17 +12,13 @@ const Cart = (props) => {
 	}, [props.cartData]);
 
 	useEffect(() => {
-		calculateTotal();
-	}, [cart]);
-
-	function calculateTotal() {
 		let sum = 0;
 		cart.forEach((item) => {
 			sum = sum + item.qty * item.price;
 		});
 
 		setTotal(sum);
-	}
+	}, [cart]);
 
 	function handleIncrement(id) {
 		const cartCopy = [...cart];

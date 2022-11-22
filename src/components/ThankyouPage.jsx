@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { deleteAllCartData, getFood } from "../utils/handleApi";
-import { Card, CardBody, Container } from "reactstrap";
+import { Card, CardBody } from "reactstrap";
 
 const ThankyouPage = (props) => {
 	useEffect(() => {
 		deleteAllCartData();
 		getFood(props.setFoodData);
 		props.setCartData([]);
-	}, []);
+	}, [props]);
 
 	return (
 		<Card className="thankyou">

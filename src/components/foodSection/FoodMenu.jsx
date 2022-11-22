@@ -1,14 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-	Container,
-	Card,
-	CardBody,
-	Spinner,
-	Row,
-	Col,
-	NavItem,
-} from "reactstrap";
-import { getFood } from "../../utils/handleApi";
+import React from "react";
+import { Container, Card, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
 const FoodMenu = (props) => {
